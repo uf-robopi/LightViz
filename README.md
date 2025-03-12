@@ -107,7 +107,7 @@ Ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/uf-robopi/LightViz.git
-   cd LightViz_Internal/Release/
+   cd LightViz/
 2. Setup the environment:
    ```bash
    conda env create -f environment.yml
