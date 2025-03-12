@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightViz</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <style>
+        #map { height: 500px; width: 500px; }
+        #colorbar {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 300px;
+            height: 20px;
+            background: linear-gradient(to right, black, gray, blue, cyan, green, yellow, red, magenta, white);
+            border: 1px solid black;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="colorbar"></div>
+</body>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    
+    <script src="leaflet-idw-directdraw.js"> </script>
+    <script src="normalized_filtered_grid_data.js"></script>
+    <script src="selected_county.js"></script>
+
+
+    <script>
+    // var map = L.map('map').setView([27, -81], 13);
+
+    // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    // }).addTo(map);
+
+    // L.marker([27, -81]).addTo(map)
+    // .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+    // .openPopup();
+    // Ensure that selectedCounty is defined in selected_county.js
+    if (typeof selectedCounty === 'undefined') {
+        var selectedCounty = 0;
+    }
+
+    // Set map view based on selectedCounty
+    var map;
+    if (selectedCounty === 1) {
+        map = L.map('map').setView([29.6692549400041, -82.35387607812498], 8);
+    } else if (selectedCounty === 2) {
+        map = L.map('map').setView([28.483472857250252, -81.31841465234373], 8);
+    } else if (selectedCounty === 3) {
+        map = L.map('map').setView([29.900478376552165, -81.41454502343748], 8);
+    } else if (selectedCounty === 4) {
+        map = L.map('map').setView([30.054526, -81.614571], 17);
+    } else{
+        map = L.map('map').setView([28.8152192019455, -81.67554295475513], 3);
+    }
+    console.log("Selected County:", selectedCounty);
+        
+    var tiles = L.tileLayer('https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga.png', {
+        attribution: '',
+    }).addTo(map);
+
+    // Print the zoom level in the console whenever it changes
+    map.on('zoomend', function() {
+        console.log("Current Zoom Level:", map.getZoom());
+    });        
+
+    var idw = L.idwLayer(addressPoints,{
+            opacity: 0.5,   //0.3
+            maxZoom: 18,
+            cellSize: 3,    //modify this to adjust the resolution
+            exp: 2,
+            max: 1
+        }).addTo(map);
+    </script>
+    
+
+</html>
