@@ -1,12 +1,22 @@
 # LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring
 
-![License](https://img.shields.io/github/license/yourusername/LightViz)
-![Stars](https://img.shields.io/github/stars/yourusername/LightViz)
-![Issues](https://img.shields.io/github/issues/yourusername/LightViz)
+![Paper](https://doi.org/10.1007/s10661-025-13862-5)
+![Pre-print](https://arxiv.org/pdf/2408.00808)
+![Project Page](https://robopi.ece.ufl.edu/lightviz.html)
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
+
+[![CC BY-NC 4.0][cc-by-nc-image]][cc-by-nc]
+
+[cc-by-nc]: https://creativecommons.org/licenses/by-nc/4.0/
+[cc-by-nc-image]: https://licensebuttons.net/l/by-nc/4.0/88x31.png
+[cc-by-nc-shield]: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
+
 
 ## 📌 Overview
 
-This repository contains the official implementation of the paper **[LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring](https://arxiv.org/abs/2408.00808)**.
+This repository contains the official implementation of the paper **[LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring](https://doi.org/10.1007/s10661-025-13862-5)**.
 
 LightViz is an interactive tool designed for automating light pollution data collection, visualization, and mapping. It enables researchers and policymakers to generate high-resolution light-field maps, simulate lighting scenarios, and analyze the impact of light pollution in various regions.
 
@@ -38,10 +48,15 @@ For visual presentation purposes, most black areas have been colored. You can mo
 If you use this repository, please cite the following paper:
 ```bibtex
 @article{huang2024lightviz,
-  title={LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring},
+  title={{LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring}},
   author={Huang, Sheng-En and Suhi, Kazi Farha Farzana and Islam, Md Jahidul},
-  journal={arXiv preprint arXiv:2408.00808},
-  year={2024}
+  journal={Environmental Monitoring and Assessment (EMA)},
+  volume={197},
+  number={384.4},
+  pages = {1573-2959},
+  doi = {https://doi.org/10.1007/s10661-025-13862-5},
+  year={2025},
+  publisher={Springer Nature}
 }
 ```
 
