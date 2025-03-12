@@ -1,8 +1,4 @@
-# LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring
-
-![Paper](https://doi.org/10.1007/s10661-025-13862-5)
-![Pre-print](https://arxiv.org/pdf/2408.00808)
-![Project Page](https://robopi.ece.ufl.edu/lightviz.html)
+# LightViz: An Interactive Tool for Light Pollution Visualization
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
@@ -16,7 +12,7 @@ This work is licensed under a
 
 ## 📌 Overview
 
-This repository contains the official implementation of the paper **[LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring](https://doi.org/10.1007/s10661-025-13862-5)**.
+This repository contains a test-case implementation of the paper **[LightViz: Autonomous Light-field Surveying and Mapping for Distributed Light Pollution Monitoring](https://doi.org/10.1007/s10661-025-13862-5)**.
 
 LightViz is an interactive tool designed for automating light pollution data collection, visualization, and mapping. It enables researchers and policymakers to generate high-resolution light-field maps, simulate lighting scenarios, and analyze the impact of light pollution in various regions.
 
@@ -60,7 +56,7 @@ If you use this repository, please cite the following paper:
 }
 ```
 
-📑 [Read the full paper (PDF)](https://arxiv.org/pdf/2408.00808.pdf)
+📑 [Refer to the paper for more details](https://doi.org/10.1007/s10661-025-13862-5)
 
 ## 📖 How to Use LightViz
 LightViz provides two types of light sources: point sources with or without attenuation. **They cannot be used simultaneously**. With attenuation, you can perform single point interpolation and render a light field map. Without attenuation, you can only perform single point interpolation. We provide IDW, OK, Shepard, SVR, and NNR methods for interpolation.
@@ -110,7 +106,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/uf-robopi/LightViz_Internal.git
+   git clone https://github.com/uf-robopi/LightViz.git
    cd LightViz_Internal/Release/
 2. Setup the environment:
    ```bash
